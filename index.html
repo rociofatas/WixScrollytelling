@@ -1,0 +1,309 @@
+<style>
+  /* ==== GENERAL STYLES ==== */
+  section {
+    padding: 3em 12%;
+    font-family: 'Futura', sans-serif;
+  }
+  h1 {
+    font-size: 56px;
+    margin-bottom: 0.5em;
+  }
+  h2 {
+    font-size: 44px;
+    margin-bottom: 0.5em;
+  }
+  p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 2em;
+  }
+
+  /* ==== COLOR BLOCKS FOR EACH STAGE ==== */
+  .discovery { background: #4469F5; color: #fff; }
+  .research { background: #AAE7C0; color: #2D3C35; }
+  .ideation { background: #D9CAE3; color: #2D2D2D; }
+  .design { background: #8E6C88; color: #fff; }
+  .delivery { background: #6E6E6E; color: #fff; }
+
+  /* ==== GALLERY GRID ==== */
+  .image-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 18px;
+    margin-top: 1.5em;
+  }
+  .thumb img {
+    width: 100%;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+  }
+  .thumb img:hover {
+    transform: scale(1.04);
+  }
+  .caption {
+    font-size: 0.85em;
+    color: rgba(0,0,0,0.7);
+    margin-top: 6px;
+  }
+  
+  .discovery .caption, .design .caption, .delivery .caption {
+    color: #ffffff;
+  }
+  
+  .cs-conclusion{ background-color: #F2F2F2; color: #424B54; }
+  .cs-cta      { background: #424B54; color: #fff; text-align: center; padding: 80px 20px; }
+
+  /* === CTA styles === */
+  .cta-container { max-width: 700px; margin: auto; }
+  .cs-cta h2    { font-size: 3rem; font-weight: 600; margin-bottom: 25px; }
+  .cs-cta p     { font-size: 1.25rem; line-height: 1.8; margin-bottom: 40px; }
+  .cta-button   { display: inline-block; background: #3C6EFD; color: #fff; padding: 16px 36px; font-size: 1.1rem; font-weight: 500;
+                  border-radius: 6px; text-decoration: none; transition: background-color .3s ease, transform .2s ease; }
+  .cta-button:hover { background: #2a4ebd; transform: translateY(-2px); }
+  
+  /* ==== Responsive grid ==== */
+  .tools-methods div {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 50px;
+  }
+  @media (max-width: 1024px) {
+    .tools-methods div { grid-template-columns: repeat(2, 1fr); gap: 30px; }
+  }
+  @media (max-width: 600px) {
+    .tools-methods div { grid-template-columns: 1fr; gap: 20px; }
+  }
+
+  /* ==== SCROLLY ANIMATION ==== */
+  .fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  }
+  .fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Hover micro-zoom para imágenes */
+  .fade-in img:hover {
+    transform: scale(1.03);
+    transition: transform 0.3s ease;
+  }
+
+  /*Accessibility*/
+  a:focus, button:focus { outline: 2px dashed #6A4C93; outline-offset: 4px; }
+
+</style>
+
+<!-- ===== 1. DISCOVERY ===== -->
+<section class="discovery fade-in">
+  <h2>1. Discovery</h2>
+  <p>I start by listening: aligning with stakeholders, defining objectives, and understanding what success looks like. This phase sets the foundation for everything that follows.</p>
+
+  <div class="thumb fade-in">
+    <img src="https://static.wixstatic.com/media/2a58bc_ea6b0522d41f411e8ea21ac19f9d7918~mv2.png" alt="Research map → Initial map to frame the project and visualize the landscape we were about to explore.">
+    <p class="caption">Research map → Initial map to frame the project and visualize the landscape we were about to explore.</p>
+  </div>
+
+  <div class="image-gallery">
+    <div class="thumb fade-in">
+      <img src="https://static.wixstatic.com/media/2a58bc_c8d60d03fa3f40529b7e1d5d7c4f0eea~mv2.jpg" alt="Benchmarking → Reviewing competitors to spot gaps and opportunities for improvement.">
+      <p class="caption">Benchmarking → Reviewing competitors to spot gaps and opportunities for improvement.</p>
+    </div>
+    <div class="thumb fade-in">
+      <img src="https://static.wixstatic.com/media/2a58bc_98f75ed53a06485ba30e6c895cef3c53~mv2.png" alt="Stakeholder mapping → Identifying everyone involved and how they connect to the product.">
+      <p class="caption">Stakeholder mapping → Identifying everyone involved and how they connect to the product.</p>
+    </div>
+    <div class="thumb fade-in">
+      <img src="https://static.wixstatic.com/media/2a58bc_1e2da42433644b8cb23c5e4667607043~mv2.png" alt="Research plan → A detailed research plan outlining goals, methods, and timelines.">
+      <p class="caption">Research plan → A detailed research plan outlining goals, methods, and timelines.</p>
+    </div>
+    <div class="thumb fade-in">
+      <img src="https://static.wixstatic.com/media/2a58bc_87341a485bba4a9596f373ee85de6d56~mv2.png" alt="Instructions for website exploration → Guide for the team to explore the current website with a critical eye.">
+      <p class="caption">Instructions for website exploration → Guide for the team to explore the current website with a critical eye.</p>
+    </div>
+    <div class="thumb fade-in">
+      <img src="https://static.wixstatic.com/media/2a58bc_b45a82f0d21a4436836e88b3a02f368a~mv2.png" alt="List of initial needs → Gathering the first ‘must-haves’ and initial requirements.">
+      <p class="caption">List of initial needs → Gathering the first ‘must-haves’ and initial requirements.</p>
+    </div>
+    <div class="thumb fade-in">
+      <img src="https://static.wixstatic.com/media/2a58bc_53887c80452c47eeb41b6bad50354734~mv2.jpeg" alt="Initial workshop → Kick-off workshop: ideas, doubts, and expectations on the table.">
+      <p class="caption">Initial workshop → Kick-off workshop: ideas, doubts, and expectations on the table.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 2. RESEARCH ===== -->
+<section class="research fade-in">
+  <h2>2. Research</h2>
+  <p>I map the context: user interviews, benchmarks, and field research to identify opportunities and constraints.</p>
+  
+  <div class="image-gallery">
+    <div class="thumb fade-in">
+      <img src="https://static.wixstatic.com/media/2a58bc_3fabb2d265a14ea7a43cc694acbc3c85~mv2.png" alt="User Journey map → Mapping how users experience the service from start to finish.">
+      <p class="caption">User Journey map → Mapping how users experience the service from start to finish.</p>
+    </div>
+    <div class="thumb fade-in">
+      <img src="https://static.wixstatic.com/media/2a58bc_3c5ad8cc80874bd398e085947dedf7fd~mv2.png" alt="Affinity mapping → Clustering insights to reveal patterns and key themes.">
+      <p class="caption">Affinity mapping → Clustering insights to reveal patterns and key themes.</p>
+    </div>
+    <div class="thumb fade-in">
+      <img src="https://static.wixstatic.com/media/2a58bc_cff11f0308854167a8e4bdbd8af2ea36~mv2.png" alt="Summary of initial interview answers → Interview summary highlighting recurring pain points and surprises.">
+      <p class="caption">Summary of initial interview answers → Interview summary highlighting recurring pain points and surprises.</p>
+    </div>
+    <div class="thumb fade-in">
+      <img src="https://static.wixstatic.com/media/2a58bc_2ff5fba26f8c4c73978d7e799b6a973e~mv2.png" alt="Empathy map → Building empathy maps to understand what users feel, think, and expect.">
+      <p class="caption">Empathy map → Building empathy maps to understand what users feel, think, and expect.</p>
+    </div>
+    <div class="thumb fade-in">
+      <img src="https://static.wixstatic.com/media/2a58bc_9abc1b8405e0492185cabb749ff292e6~mv2.webp" alt="Information Architecture → Drafting how information should be structured and organized.">
+      <p class="caption">Information Architecture → Drafting how information should be structured and organized.</p>
+    </div>
+    <div class="thumb fade-in">
+      <img src="https://static.wixstatic.com/media/2a58bc_cdeab9cb5bbd42f7aca038215e098cf4~mv2.jpg" alt="User persona → Creating user personas to guide every design decision.">
+      <p class="caption">User persona → Creating user personas to guide every design decision.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 3. IDEATION ===== -->
+<section class="ideation fade-in">
+  <h2>3. Ideation</h2>
+  <p>I explore: sketching, creating moodboards, and facilitating workshops to generate solutions and creative directions.</p>
+  
+  <div class="image-gallery">
+    <div class="thumb fade-in">
+      <img src="https://static.wixstatic.com/media/2a58bc_3f331fb5bf834ea48291f4b29da5da1b~mv2.png" alt="Initial brainstorming → An open brainstorm—every idea is welcome at this stage.">
+      <p class="caption">Initial brainstorming → An open brainstorm—every idea is welcome at this stage.</p>
+    </div>
+    <div class="thumb fade-in">
+      <img src="https://static.wixstatic.com/media/2a58bc_94cb744867a94fbd83402d42e4f89d42~mv2.png" alt="Moodboard → Collecting visual references to set tone and style.">
+      <p class="caption">Moodboard → Collecting visual references to set tone and style.</p>
+    </div>
+    <div class="thumb fade-in">
+      <img src="https://static.wixstatic.com/media/2a58bc_0a9295de15ae47d0a17f4db88f650a79~mv2.png" alt="Storyboard → Visual storytelling of how users interact with the product.">
+      <p class="caption">Storyboard → Visual storytelling of how users interact with the product.</p>
+    </div>
+    <div class="thumb fade-in">
+      <img src="https://static.wixstatic.com/media/2a58bc_3d4b9ef0f6e94913bfad452c02fced0f~mv2.jpg" alt="Paper prototype → Quick paper prototypes to test and fail fast.">
+      <p class="caption">Paper prototype → Quick paper prototypes to test and fail fast.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 4. DESIGN ===== -->
+<section class="design fade-in">
+  <h2>4. Design</h2>
+  <p>I shape the solution: developing UI, design systems, and prototypes to bring ideas to life and prepare for implementation.</p>
+  
+  <div class="image-gallery">
+    <div class="thumb fade-in">
+      <img src="https://static.wixstatic.com/media/2a58bc_6ae4176e2f9c4c658609a9fd288190d7~mv2.png" alt="Interaction map → Mapping out how screens and elements connect.">
+      <p class="caption">Interaction map → Mapping out how screens and elements connect.</p>
+    </div>
+    <div class="thumb fade-in">
+      <img src="https://static.wixstatic.com/media/2a58bc_53dd958485f944db9af0b67bce243404~mv2.gif" alt="Wireframes → Low-fidelity wireframes to shape the user experience.">
+      <p class="caption">Wireframes → Low-fidelity wireframes to shape the user experience.</p>
+    </div>
+    <div class="thumb fade-in">
+      <img src="https://static.wixstatic.com/media/2a58bc_15f9e7d8819c48b39891733731dc1a09~mv2.png" alt="Design system → A design system to unify components, rules, and the visual language.">
+      <p class="caption">Design system → A design system to unify components, rules, and the visual language.</p>
+    </div>
+    <div class="thumb fade-in">
+      <img src="https://static.wixstatic.com/media/2a58bc_d38aaa18a51d47e78161406e65c2fb49~mv2.jpg" alt="Mobile screens → Key mobile screens—the design coming to life.">
+      <p class="caption">Mobile screens → Key mobile screens—the design coming to life.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 5. DELIVERY & SUPPORT ===== -->
+<section class="delivery fade-in">
+  <h2>5. Delivery & Support</h2>
+  <p>I facilitate a smooth handoff to development and stay involved to ensure designs are implemented correctly and evolve as needed.</p>
+  
+  <div class="image-gallery">
+    <div class="thumb fade-in">
+      <img src="https://static.wixstatic.com/media/2a58bc_7f706878fb9b488a884cd069f57ce34f~mv2.png" alt="Mobile tablet version → Tablet version: adapting layouts for different devices.">
+      <p class="caption">Mobile tablet version → Tablet version: adapting layouts for different devices.</p>
+    </div>
+    <div class="thumb fade-in">
+      <img src="https://static.wixstatic.com/media/2a58bc_bb664f6cd10c4beca3f208af61a557eb~mv2.png" alt="Annotated frameworks → Annotated frameworks for the development team.">
+      <p class="caption">Annotated frameworks → Annotated frameworks for the development team.</p>
+    </div>
+    <div class="thumb fade-in">
+      <img src="https://static.wixstatic.com/media/2a58bc_710b445c10f14510839659e79caad5f4~mv2.gif" alt="Rough prototype → A rough prototype to validate core ideas.">
+      <p class="caption">Rough prototype → A rough prototype to validate core ideas.</p>
+    </div>
+    <div class="thumb fade-in">
+      <a href="https://www.figma.com/proto/nxPFWtZuzJCQG6LFYw4idH/Hotel-Search-New?node-id=1%3A2&scaling=scale-down&page-id=0%3A1&starting-point-node-id=1%3A2&show-proto-sidebar=1" target="_blank;">
+        <img src="https://static.wixstatic.com/media/2a58bc_fbd0ac8d8e9b47c4b2b652020535a889~mv2.png" alt="Mid fidelity interactive prototype → An interactive mid-fidelity prototype that starts feeling real.">
+      </a>
+      <p class="caption">Mid fidelity interactive prototype → An interactive mid-fidelity prototype that starts feeling real.</p>
+    </div>
+  </div>
+</section>
+
+<section style="background-color:#F2F2F2; padding:60px 20px; font-family:Futura, sans-serif;" class="fade-in">
+  <h2 style="text-align:center; font-size:36px; margin-bottom:40px; color:#333;">
+    Tools & Methods
+  </h2>
+
+  <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:30px; max-width:1200px; margin:0 auto;">
+    <div style="flex:1 1 220px; max-width:250px; text-align:center;">
+      <h3 style="font-size:22px; color:#4469F5; margin-bottom:10px;">Research</h3>
+      <p style="font-size:16px; color:#333;">User interviews, surveys, diary studies, contextual inquiry</p>
+    </div>
+    <div style="flex:1 1 220px; max-width:250px; text-align:center;">
+      <h3 style="font-size:22px; color:#4469F5; margin-bottom:10px;">Ideation</h3>
+      <p style="font-size:16px; color:#333;">Brainstorming, How Might We questions, co-creation workshops</p>
+    </div>
+    <div style="flex:1 1 220px; max-width:250px; text-align:center;">
+      <h3 style="font-size:22px; color:#4469F5; margin-bottom:10px;">Prototyping</h3>
+      <p style="font-size:16px; color:#333;">Wireframes, low/high-fidelity prototypes, usability testing</p>
+    </div>
+    <div style="flex:1 1 220px; max-width:250px; text-align:center;">
+      <h3 style="font-size:22px; color:#4469F5; margin-bottom:10px;">Strategy</h3>
+      <p style="font-size:16px; color:#333;">Design thinking, service blueprints, value proposition canvas</p>
+    </div>
+  </div>
+</section>
+
+<section class="cs-cta fade-in">
+  <div class="cta-container">
+    <h2>Let’s build the next big thing</h2>
+    <p>Looking for a designer who can bridge research, design systems, and interface craft? I’d love to collaborate on your next project.</p>
+    <a href="mailto:rocio@rociofatas.info" class="cta-button">Get in touch</a>
+  </div>
+</section>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const faders = document.querySelectorAll('.fade-in');
+
+  const options = { threshold: 0.2 };
+
+  const appearOnScroll = new IntersectionObserver(function (entries, observer) {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        setTimeout(() => {
+          entry.target.classList.add('visible');
+        }, 100);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, options);
+
+  faders.forEach((fader, index) => {
+    const maxDelay = 0.3; // en segundos
+const delayStep = 0.05; 
+
+fader.style.transitionDelay = `${Math.min(index * delayStep, maxDelay)}s`;
+
+    //fader.style.transitionDelay = `${index * 0.02}s`;
+    appearOnScroll.observe(fader);
+  });
+});
+</script>
