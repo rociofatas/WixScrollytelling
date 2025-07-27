@@ -1,4 +1,5 @@
 <style>
+
   /* ==== GENERAL STYLES ==== */
   section {
     padding: 3em 12%;
@@ -95,6 +96,71 @@
 
   /*Accessibility*/
   a:focus, button:focus { outline: 2px dashed #6A4C93; outline-offset: 4px; }
+
+  /* ==== 📱 MOBILE STYLES ==== */
+@media (max-width: 768px) {
+
+  /* Reduce padding general para que no se vea “apretado” */
+  section {
+    padding: 2em 8%;
+  }
+
+  /* Titulares más proporcionados */
+  h1 {
+    font-size: 38px;
+    line-height: 1.2;
+  }
+  h2 {
+    font-size: 28px;
+    line-height: 1.3;
+  }
+
+  /* Textos ligeramente más pequeños para encajar mejor */
+  p {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  /* ==== Image Gallery → de grid a columna ==== */
+  .image-gallery {
+    display: block;        /* 💡 hace que cada thumb ocupe todo el ancho */
+  }
+  .image-gallery .thumb {
+    margin-bottom: 20px;   /* espacio entre imágenes */
+  }
+  .thumb img {
+    width: 100%;
+    height: auto;
+  }
+
+  /* ==== Tools & Methods → stack en columna ==== */
+  .tools-methods div {
+    grid-template-columns: 1fr !important;
+    gap: 20px;
+    text-align: center;
+  }
+
+  /* ==== CTA Section ==== */
+  .cs-cta h2 {
+    font-size: 2rem;
+  }
+  .cs-cta p {
+    font-size: 1.1rem;
+  }
+  .cta-button {
+    width: 100%;
+    display: block;
+    padding: 14px 0;
+    font-size: 1.2rem;
+  }
+
+  /* Espaciado general para no saturar */
+  .fade-in {
+    margin-bottom: 30px;
+  }
+
+}
+
 
 </style>
 
